@@ -1,5 +1,5 @@
 #include<stdio.h>
-int main()
+void main()
 {
 int a[8],b[8],c[8],comp[8],diff[8],i,j,carry=0;
  printf("\nEnter two 8-bit binary numbers\n");
