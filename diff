@@ -1,4 +1,4 @@
-#include<stdio.h>
+
 void main()
 {
 int a[8],b[8],c[8],comp[8],diff[8],i,j,carry=0;
