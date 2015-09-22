@@ -1,0 +1,53 @@
+#include<stdio.h>
+int main()
+{
+int a[8],b[8],c[8],comp[8],diff[8],i,j,carry=0;
+ printf("\nEnter two 8-bit binary numbers\n");
+            printf("\nEnter first number: ");
+            for(i = 0; i<8; i++){
+                        scanf("%d",&a[i]);
+            }
+            printf("\nEnter second number: ");
+            for(i = 0; i<8; i++){
+                        scanf("%d",&b[i]);
+            }
+for(i=7;i>=0;i--)
+{
+if(b[i]==0)
+c[i]=1;
+else
+c[i]=0;
+}
+i=7;
+c[i] = c[i]+1;
+
+ for(i = 7; i >= 0; i--)
+{
+                       comp[i]=c[i]+carry;
+                        if(comp[i]>=2){
+                                    carry = 1;
+                        }
+                        else
+                                    carry = 0;
+                        comp[i] = comp[i]%2;
+            }
+for(i=0;i<=7;i++)
+printf("%d",comp[i]);
+for(i=7;i>=0;i++)
+{
+                        carry=0;
+                        diff[i]=a[i]+comp[i]+carry;
+                        if(diff[i]>=2){
+                                    carry = 1;
+                        }
+                        else
+                                    carry = 0;
+                        diff[i] = diff[i]%2;
+
+}
+printf("Difference:");
+for(i=0;i<=7;i++)
+printf("%d",diff[i]);
+return 0;
+}
+
